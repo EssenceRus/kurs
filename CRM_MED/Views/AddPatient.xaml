@@ -1,0 +1,46 @@
+﻿<Window x:Class="CRM_MED.Views.AddPatient"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CRM_MED.Views"
+        mc:Ignorable="d"
+        Title="AddPatient" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+
+        </Grid.RowDefinitions>
+        <StackPanel>
+            <TextBlock Text="Фио" ></TextBlock>
+            <TextBox x:Name="name" Grid.Row="0" Width="100" HorizontalAlignment="Left"></TextBox>
+            <TextBox x:Name="surname" Grid.Row="0" Width="100" HorizontalAlignment="Left"></TextBox>
+            <TextBox x:Name="patronymic" Grid.Row="0" Width="100" HorizontalAlignment="Left"></TextBox>
+            <TextBlock Text="гендер" ></TextBlock>
+            <ComboBox x:Name="gender" Grid.Row="0" Width="100" HorizontalAlignment="Left" ItemsSource="{Binding genders}" >
+                <ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding Code}"></TextBlock>
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+            </ComboBox>
+            <TextBlock Text="телефон" ></TextBlock>
+            <TextBox x:Name="phone" Grid.Row="0" Width="100" HorizontalAlignment="Left"></TextBox>
+            <TextBlock Text="хронические" ></TextBlock>
+            <TextBox x:Name="hronick" Grid.Row="0" Width="100" HorizontalAlignment="Left"></TextBox>
+            <TextBlock Text="пасспорт" ></TextBlock>
+            <TextBox x:Name="pass" Grid.Row="0" Width="100" HorizontalAlignment="Left"></TextBox>
+            <TextBlock Text="снил" ></TextBlock>
+            <TextBox x:Name="snils" Grid.Row="0" Width="100" HorizontalAlignment="Left"></TextBox>
+            <TextBlock Text="фото" ></TextBlock>
+            <TextBox x:Name="photo" Grid.Row="0" Width="100" HorizontalAlignment="Left"></TextBox>
+            <TextBlock Text="полис" ></TextBlock>
+            <TextBox x:Name="policy" Grid.Row="0" Width="100" HorizontalAlignment="Left"></TextBox>
+            <TextBlock Text="место регистрации" ></TextBlock>
+            <TextBox x:Name="reg" Grid.Row="0" Width="100" HorizontalAlignment="Left"></TextBox>
+            <TextBlock Text="дата рождения" ></TextBlock>
+            <TextBox x:Name="birthday" Grid.Row="0" Width="100" HorizontalAlignment="Left"></TextBox>
+            <Button Click="AddBtn" Height="20" Content="Добавить"></Button>
+        </StackPanel>
+    </Grid>
+</Window>
